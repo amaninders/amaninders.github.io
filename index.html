@@ -384,6 +384,12 @@
 								<div class="form-group">
 									<input type="text" class="form-control text-center" placeholder="Enter Email address">
 									<input type="submit" value="Subscribe" class="btn btn-primary btn-custom">
+									    <div class="fb-messengermessageus"
+									         messenger_app_id="95100348886"
+									         page_id="104433261196256"
+									         color="blue"
+									         size="large">
+									    </div>
 								</div>
 							</div>
 						</div>
@@ -404,6 +410,24 @@
 	
 	</div>
 
+	<script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '95100348886',
+          xfbml      : true,
+          version    : 'v2.6'
+        });
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -422,33 +446,6 @@
 	<script src="js/main.js"></script>
 
 	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-	<!-- Load Facebook SDK for JavaScript -->
-      <div id="fb-root"></div>
-      <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v6.0'
-          });
-        };
-
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-
-      <!-- Your customer chat code -->
-      <div class="fb-customerchat"
-        attribution=setup_tool
-        page_id="104433261196256"
-  theme_color="#ff7e29"
-  logged_in_greeting="Hi! How can I help you?"
-  logged_out_greeting="Hi! How can I help you?">
-      </div>
 
 	</body>
 </html>
