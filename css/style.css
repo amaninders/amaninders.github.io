@@ -596,7 +596,7 @@ header {
     transform: rotate(0deg); }
   100% {
     -webkit-transform: rotate(150deg);
-    transform: rotate(150deg); } }
+    transform: rotate(180deg); } }
 
 @keyframes loading-2 {
   0% {
@@ -604,7 +604,7 @@ header {
     transform: rotate(0deg); }
   100% {
     -webkit-transform: rotate(150deg);
-    transform: rotate(150deg); } }
+    transform: rotate(180deg); } }
 
 @-webkit-keyframes loading-3 {
   0% {
@@ -627,8 +627,8 @@ header {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
   100% {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg); } }
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg); } }
 
 @keyframes loading-4 {
   0% {
@@ -644,7 +644,7 @@ header {
     transform: rotate(0deg); }
   100% {
     -webkit-transform: rotate(125deg);
-    transform: rotate(125deg); } }
+    transform: rotate(180deg); } }
 
 @keyframes loading-5 {
   0% {
@@ -652,7 +652,7 @@ header {
     transform: rotate(0deg); }
   100% {
     -webkit-transform: rotate(125deg);
-    transform: rotate(125deg); } }
+    transform: rotate(180deg); } }
 
 @media only screen and (max-width: 990px) {
   .progress {
