@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kayako Demo</title>
+	<script src="hmac-sha256.js"></script>
+	<style>
+		.button {
+		  border: none;
+		  color: white;
+		  padding: 6px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  transition-duration: 0.4s;
+		  cursor: pointer;
+		}
+		.button2 {
+		  background-color: white; 
+		  color: black; 
+		  border: 2px solid #008CBA;
+		}
+		.button2:hover {
+		  background-color: #008CBA;
+		  color: white;
+		}
+	</style>
+</head>
+<body>
+
+<h1>This page uses the Kayako Identify Method</h1>
+
+<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+<div>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+
+<br>
+<br>
+
+<div id="start_chat"><button class="button button2" onclick="toggleMessenger(event)">Chat with Support</button></div><div id="kayako-unread-counts"></div>
+
+<script>(function(d,a){function c(){var b=d.createElement("script");b.async=!0;b.type="text/javascript";b.src=a._settings.messengerUrl;b.crossOrigin="anonymous";var c=d.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}window.kayako=a;a.readyQueue=[];a.newEmbedCode=!0;a.ready=function(b){a.readyQueue.push(b)};a._settings={apiUrl:"https://acrossover.kayako.com/api/v1",messengerUrl:"https://acrossover.kayakocdn.com/messenger",realtimeUrl:"wss://kre.kayako.net/socket"};window.attachEvent?window.attachEvent("onload",c):window.addEventListener("load",c,!1)})(document,window.kayako||{});</script>
+  
+<script type="text/javascript">
+	setTimeout(function () {
+		kayako.ready(function () {
+
+			// hide the launcher
+			kayako.config = {
+			  hideLauncher: true
+			};
+
+
+			// identity verification
+			var timestamp = Math.floor(Date.now() / 1000);
+	        var name = 'User created via identify';
+	        var email = 'guruJedi@kayako.com';
+	        var token = 'nA72FrvchGZECYJkLK1edWveTC83kRdzi9KC5Mo9ccB3gfKbsbrcpfZhSmmHhgZ8';
+	        var signature = CryptoJS.HmacSHA256(name+email+token+timestamp, token).toString();
+	        kayako.identify(name, email, signature, timestamp);
+
+
+			// function to display the unread messages
+			kayako.on('unread_messages_count_changed', function (count) {
+		    	const element = document.getElementById('kayako-unread-counts')
+				if (count > 0) {
+				    var suffix = count === 1 ? '' : 's'
+				    element.style.display = 'inline-block'
+				    element.innerHTML = count + ' new message' + suffix
+				} 
+				else 
+				{
+				    element.style.display = 'none'
+				}
+			});
+
+
+			// function to check the conversation ID in local storage and post username from Exoclick
+			kayako.on('chat_started', function (conversation) {
+				
+				function checkconversationID() {
+					if (JSON.parse(window.localStorage.getItem('ko:conversation')).id) {
+
+						var caseID = JSON.parse(window.localStorage.getItem('ko:conversation')).id;
+						var fingerprint_id = window.localStorage.getItem('fingerprint_id');
+						var usernameInExo = "aman"; //you can change this when implementing on Exoclick Portal
+
+				    	var URL = "https://acrossover.kayako.com/api/v1/conversations/" + caseID + "/messages.json";
+				    	
+				    	var myHeaders = new Headers();
+						myHeaders.append("X-FingerPrint-Id", fingerprint_id);
+						myHeaders.append("Content-Type", "application/json;charset=UTF-8");
+
+						var raw = "{\"contents\": \"username:" + usernameInExo + "\"}";
+						
+						var requestOptions = {
+						  method: 'POST',
+						  headers: myHeaders,
+						  body: raw,
+						  redirect: 'follow'
+						};
+
+						fetch(URL, requestOptions);
+					}
+					else {
+						alert("No")
+					}
+ 				}
+				setTimeout(checkconversationID, 1000);
+			});
+		});
+	});
+
+
+	// toggle the messenger state
+	function toggleMessenger (e) {
+  		if (kayako.visibility() === 'minimized') {
+		    kayako.maximize()
+		} 
+		else {
+		    kayako.minimize()
+		}
+		e.preventDefault()
+	}
+
+</script>
+
+</body>
+</html>
