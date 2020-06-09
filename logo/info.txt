@@ -1,0 +1,18 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: HACKED
+font link: http://watchdogsfont.com
+font author: David Libeau
+font author site: https://davidlibeau.fr/
+
+
+icon designer: Julien Meysmans
+icon designer link: /M_Julz
+        
+
+fontColor: {"hex":"#EB6E00"}
+bgColor: {"hex":"#fafafa"}
+iconColor: {"hex":"#EB6E00"}
+
+      
