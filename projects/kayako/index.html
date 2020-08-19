@@ -102,7 +102,7 @@
 						myHeaders.append("X-FingerPrint-Id", fingerprint_id);
 						myHeaders.append("Content-Type", "application/json;charset=UTF-8");
 
-						var raw = "{\"contents\": \"username:" + usernameInExo + "\" ; \"source\": \"MESSENGER\" }";
+						var raw = "{\"contents\": \"username:" + usernameInExo + "\" , \"source\": \"MESSENGER\" }";
 						
 						var requestOptions = {
 						  method: 'POST',
