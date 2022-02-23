@@ -79,7 +79,7 @@ const controlElementVisibility = () => {
  */
 const isInViewport = (el) => {
     const rect = el.getBoundingClientRect();
-    return (rect.top <= 100 && rect.top >= -200 )
+    return (rect.top <= 300 && rect.top >= -400 )
 }
 
 /**
