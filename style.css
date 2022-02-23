@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;800&display=swap');
+
+* {
+    /* font */
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+section {
+  max-width: 100vw;
+}
+
+h3 {
+    text-align: center;
+}
+
+
+#landing {
+    /* defaults */
+    min-height: 100vh;
+    max-height: 100vh;
+    min-width: 100vw;
+    max-width: 100vw;
+    
+    /* background */
+    background: url('images/shrubs.png'), url('/images/mountains.png');
+    background-size: contain, contain;
+    background-repeat: no-repeat;
+    background-position:bottom;
+}
+
+#intro {
+    margin-bottom: 13rem !important;
+}
+
+#pablita {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: right 2s, visibility .5s, opacity 0.5s linear;
+    opacity: 1;
+}
+
+#git-pull {
+    height: 10rem;
+}
+
+.heading-text  {
+    font-size: 5rem !important;
+    animation: fadeIn linear 2s;
+    -webkit-animation: fadeIn linear 2s;
+    -moz-animation: fadeIn linear 2s;
+    -o-animation: fadeIn linear 2s;
+    -ms-animation: fadeIn linear 2s;
+} 
+
+.html-card {
+  background: lavender;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+
+/* about */
+#about {
+    background: #82b1ff;
+}
+
+#work {
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: 8rem;
+}
+
+#gitmap {
+  filter: sepia(100%) hue-rotate(185deg) saturate(500%);
+}
+
+#portfolio {
+    background: #5a38fd;
+    color: aliceblue;
+}
+
+#portfolio-intro {
+  min-height: 50vh;
+}
+
+.card {
+  width: 50vw;
+  width: 50vw;
+  height: 70vh;
+  background: white;
+  color: #000;
+  border-radius: 15px;
+  box-shadow: 4px 4px 0 black, 8px 8px 0 black, 12px 12px 0 black;
+}
+
+.card-body {
+  overflow-y: scroll;
+}
+
+.card-body::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.card-body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.card-body::-webkit-scrollbar-thumb {
+  background: #82b1ff; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.card-body::-webkit-scrollbar-thumb:hover {
+  background: #1c73ff; 
+}
+
+#iphone {
+  visibility: hidden;
+}
+
+.notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 150px;
+  height: 30px;
+  background-color: #222;
+  border-radius: 0 0 28px 28px;
+  transform: translateX(-50%);
+}
+
+.notch::before, .notch::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -7px;
+  width: 14px;
+  height: 7px;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle at 0 100%, transparent 6px, #222 7px);
+}
+.notch::after {
+  left: 100%;
+  margin-right: corner-sizepx;
+  background-image: radial-gradient(circle at 100% 100%, transparent 6px, #222 7px);
+}
+
+.container-general {
+    padding: 75px 0;
+    margin: 0 auto;
+    width: 800px;
+  }
+  .container-general .gallery-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+  }
+  .container-general .gallery-wrap .item {
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-repeat: none;
+    transition: all 0.8s ease;
+  }
+  .container-general .gallery-wrap .item:hover {
+    flex: 7;
+  }
+  
+  .wrap-effect-1 .item:first-of-type {
+    background-image: url('/images/crypto.png');
+  }
+  .wrap-effect-1 .item:nth-of-type(2) {
+    background-image: url('/images/code.png');
+  }
+  .wrap-effect-1 .item:last-of-type {
+    background-image: url('/images/blog.png');
+  }
+
+/* media queries */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { }
+ 
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+  #git-pull {
+    height: 6rem;
+  }
+
+  #scooter {
+    height: 10rem   
+  }
+
+  #intro {
+    margin-bottom: 1.5 rem;
+  }
+
+  #work {
+    background-size: 3rem;
+  }
+
+  #gitmap {
+    display: none;
+  }
+
+  .card {
+    width: 50vw;
+    height: 70vh;
+    background: white;
+    color: #000;
+    border-radius: 50px;
+    border: 5px solid black;
+  }
+
+  #mac {
+    visibility: hidden;
+  }
+
+  #iphone {
+    visibility: visible;
+    border: none;
+  }
+}
+
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  #git-pull {
+    height: 6rem;
+  }
+
+  #scooter {
+    height: 8rem   
+  }
+
+  #intro {
+    margin-bottom: 1.5 rem;
+  }
+
+  #work {
+    background-size: 3rem;
+  }
+  #gitmap {
+    display: none;
+  }
+
+  .card {
+    width: 70vw;
+    height: 70vh;
+    background: white;
+    color: #000;
+    border-radius: 40px;
+  }
+}
+
+@media (max-width: 575.98px) { 
+  .card {
+    width: 80vw;
+    min-height: 60vh;
+    background: white;
+    color: #000;
+    border-radius: 40px;
+  }
+}
