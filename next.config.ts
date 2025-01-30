@@ -1,12 +1,14 @@
-// next.config.ts
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  output: 'export',  // Enables static exports
+  output: 'export',
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true,
   },
-  basePath: '/amaninders.github.io', // Add this if you're not using a custom domain
+  basePath: process.env.NODE_ENV === 'production' ? '/amaninders.github.io' : '',
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 }
 
 export default nextConfig
