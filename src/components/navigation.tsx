@@ -84,7 +84,7 @@ const CircleNav = ({
 
       {isOpen && (
         <div className="absolute right-16 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-lg rounded-xl shadow-lg border border-zinc-200 py-4 min-w-[160px]">
-          {sections.map((section, index) => (
+          {sections.map((section) => (
             <a
               key={section}
               href={`#${section}`}

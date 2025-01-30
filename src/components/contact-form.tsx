@@ -66,7 +66,11 @@ export default function ContactForm() {
       
       setTimeout(() => setStatus(''), 3000);
     } catch (error) {
-      setStatus('error');
+      if (error instanceof Error) {
+        setStatus(error.message);
+      } else {
+        setStatus('An unknown error occurred.');
+      }
       setTimeout(() => setStatus(''), 3000);
     }
   };

@@ -1,7 +1,5 @@
 // src/types/content.ts
 
-import exp from "constants";
-
 export interface SiteContent {
     meta: {
       title: string;

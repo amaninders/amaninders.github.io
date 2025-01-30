@@ -1,18 +1,9 @@
 'use client'
-
-import {  } from 'lucide-react'
-import {  Section, SectionHeading } from '@/components/ui'
-// import ContactForm from '@/components/contact-form'
-import { siteContent } from '@/config/content'
-
 import React, { useState, useEffect } from 'react';
-import { ArrowRight } from 'lucide-react';
 
-import { Star, GitFork } from 'lucide-react';
-
-import { ExternalLink, Github } from 'lucide-react';
-
-import { Calendar, MapPin } from 'lucide-react';
+import { ArrowRight, ExternalLink, Calendar, MapPin } from 'lucide-react';
+import { Section, SectionHeading } from '@/components/ui'
+import { siteContent } from '@/config/content'
 
 
 // solari board components
@@ -481,7 +472,7 @@ const SocialLinks = () => (
 const ContactForm = () => (
   <form className="space-y-8 bg-white p-6 rounded-lg shadow-md">
     <div>
-      <p className="text-base text-orange-900 mb-8">Hi, I'm interested in working together.</p>
+      <p className="text-base text-orange-900 mb-8">Hi, I am interested in working together.</p>
       
       <div className="space-y-8">
         <div>
@@ -495,7 +486,7 @@ const ContactForm = () => (
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm text-orange-800">I'm reaching out because</label>
+          <label htmlFor="message" className="block text-sm text-orange-800">I am reaching out because</label>
           <textarea
             id="message"
             rows={3}
@@ -533,7 +524,7 @@ export const ContactSection = () => (
           <div>
             <h2 className="text-4xl font-normal border-b border-black pb-1 inline-block">Contact</h2>
             <p className="mt-8 text-base">
-              Interested in discussing technical solutions? Let's connect.
+              Interested in discussing technical solutions? Lets connect.
             </p>
           </div>
           
