@@ -1,3 +1,4 @@
+// default page
 import Navigation from '@/components/navigation'
 import { 
   HeroSection,
