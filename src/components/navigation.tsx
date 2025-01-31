@@ -75,7 +75,8 @@ const CircleNav = ({
     ${show ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8 pointer-events-none'}
   `}>
     <div className="relative">
-      <button
+      <button 
+        name='menu'
         onClick={onToggle}
         className="bg-amber-500 hover:bg-amber-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300"
       >

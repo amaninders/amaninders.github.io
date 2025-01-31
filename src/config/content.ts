@@ -74,31 +74,7 @@ export const siteContent = {
             "Mentored junior developers and conducted weekly technical workshops on React best practices and modern web development."
           ],
           technologies: ["React", "TypeScript", "Tailwind", "Next.js"]
-        },{
-          company: "Tech Solutions Inc.",
-          position: "Senior Frontend Developer",
-          duration: "2022 — Present",
-          location: "San Francisco",
-          companyUrl: "https://example.com",
-          description: [
-            "Led a team of 5 developers in rebuilding the company's main dashboard application using React and TypeScript, resulting in a 40% performance improvement.",
-            "Established new coding standards and review processes, reducing reported bugs by 30% and improving team velocity.",
-            "Mentored junior developers and conducted weekly technical workshops on React best practices and modern web development."
-          ],
-          technologies: ["React", "TypeScript", "Tailwind", "Next.js"]
-        },{
-          company: "Tech Solutions Inc.",
-          position: "Senior Frontend Developer",
-          duration: "2022 — Present",
-          location: "San Francisco",
-          companyUrl: "https://example.com",
-          description: [
-            "Led a team of 5 developers in rebuilding the company's main dashboard application using React and TypeScript, resulting in a 40% performance improvement.",
-            "Established new coding standards and review processes, reducing reported bugs by 30% and improving team velocity.",
-            "Mentored junior developers and conducted weekly technical workshops on React best practices and modern web development."
-          ],
-          technologies: ["React", "TypeScript", "Tailwind", "Next.js"]
-        },
+        }
       ]
     },
   
@@ -210,23 +186,17 @@ export const siteContent = {
   
     tools: [
       {
-        name: "Weather Dashboard",
-        description: "Real-time weather monitoring with detailed forecasts and interactive maps.",
-        url: "https://github.com/yourusername/weather-app",
-        language: "React"
+        name: "Microsoft 365 Tools",
+        description: "A collection of productivity tools for Microsoft 365 users.",
+        url: "/microsoft-tools/",
+        language: "NextJS"
       },
       {
-        name: "Task Manager",
-        description: "Simple and intuitive task management application with team collaboration features.",
-        url: "https://tasks.example.com",
-        language: "TypeScript"
-      },
-      {
-        name: "Portfolio Website",
-        description: "A personal portfolio website showcasing projects and skills.",
-        url: "https://github.com/yourusername/portfolio-website",
-        language: "React"
-      }
+        name: "PDF Joiner",
+        description: "A simple tool to merge multiple PDF files into a single document.",
+        url: "/pdf/",
+        language: "WASM"
+      },      
     ],
   
     contact: {

@@ -418,7 +418,7 @@ const ReusableCard = ({ tool }: { tool: Tool }) => (
       <div className="flex gap-2">
         {(tool.svn_url || tool.url) && (
           <a
-            href={(tool.svn_url || tool.url)}
+            href={(tool.svn_url || (tool.url && + 'https://amaninder.com' + tool.url ))}
             target="_blank"
             rel="noopener noreferrer"
             className="text-zinc-400 hover:text-zinc-900 transition-colors"
