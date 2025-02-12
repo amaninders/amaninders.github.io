@@ -196,7 +196,13 @@ export const siteContent = {
         description: "A simple tool to merge multiple PDF files into a single document.",
         url: "/pdf/",
         language: "WASM"
-      },      
+      },
+      {
+        name: "Image to PDF",
+        description: "Convert images to PDF files with this online tool.",
+        url: "/imagetopdf/",
+        language: "WASM"
+      }      
     ],
   
     contact: {
