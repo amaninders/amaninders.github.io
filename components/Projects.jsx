@@ -11,13 +11,13 @@ export default function Projects() {
             name: "PDF Joiner",
             description: "A simple tool to merge multiple PDF files into a single document.",
             link: "https://www.amaninder.com/pdf/",
-            svg: "/webAssembly.svg"
+            svg: "/WebAssembly.svg"
         },
         {
             name: "Image to PDF",
             description: "Convert images to PDF files with this online tool.",
             link: "https://www.amaninder.com/imagetopdf/",
-            svg: "/webAssembly.svg"
+            svg: "/WebAssembly.svg"
 
         }        
     ]
