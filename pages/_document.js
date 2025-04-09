@@ -20,7 +20,7 @@ export default function Document() {
         <meta property="og:title" content="Amaninder Singh | Web Developer & SEO Expert" />
         <meta property="og:image" content="/images/zcbfudPA2AVY.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@jattster" />
+        <meta name="twitter.:site" content="@jattster" />
         <meta name="twitter:title" content="Amaninder Singh | Web Developer & SEO Expert" />
         <meta name="twitter:description" content="Portfolio and blog of Amaninder Singh, a web developer and SEO expert." />
         <meta name="twitter:image" content="/og-image.png" />

@@ -3,16 +3,14 @@ export default function Intro() {
    const data = {
       name: "Amaninder Singh",
       links: [
-         { text: "blog", href: "/blog", target: "_self" },
-         { text: "inspirations", href: "/inspirations", target: "_self" },
          { text: "contact", href: "https://www.linkedin.com/in/amaninders/", target: "_blank" },
+         { text: "resume", href: "/resume", target: "_blank" },
       ],
       bio: [
          "Hello! I'm Amaninder, a Solutions and Implementation Engineer with full-stack technical expertise and a talent for translating complex requirements into elegant implementations. ",
          "My goal is to leverage my position at the intersection of technology and business to deliver solutions that enhance functionality while addressing precise client requirements.",
          "I live in Ontario, Canada."
       ],
-      resume: "link" // Placeholder for resume link
    }
    
     return (
@@ -36,11 +34,6 @@ export default function Intro() {
                {data.bio.map((paragraph, index) => (
                   <p key={index} className="pb-2">{paragraph}</p>
                ))}
-               <p className="underline bold italic pt-4">
-                  <a href={data.resume} target="_blank" rel="noopener noreferrer">
-                     download resume
-                  </a>
-               </p>
             </div>
          </div>
       </section>

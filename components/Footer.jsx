@@ -1,45 +1,44 @@
 // Footer Component
 export default function Footer() {
+   const data = {
+      links: [
+         { text: "resume", href: "/resume", target: "_blank" },
+      ],
+      contact : [
+         { text: "email", href: "mailto:contact@amainder.com", target: "_self" },
+         { text: "linkedin", href: "https://www.linkedin.com/in/amaninders/", target: "_blank" },
+      ]
+   }
+
     return (
       <footer className="container grid gap-5 pt-6 text-slate-700 md:py-10 dark:text-slate-400 ">
          <section className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3">
             <div>
-               <h3 className="pb-4 font-bold">general</h3>
+               <h3 className="pb-4 font-bold">links</h3>
                <ul>
-                  <li className="space-x-1 pb-4">
+                  {data.links.map((link) => (
+                     <li className="space-x-1 pb-4">
                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline size-4">
                         <path d="M7 7h10v10"></path>
                         <path d="M7 17 17 7"></path>
                      </svg>
-                     <a className="decoration-dotted underline-offset-8 hover:underline" href="/blog" target="_self">blog</a>
-                  </li>
-                  <li className="space-x-1">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline size-4">
-                        <path d="M7 7h10v10"></path>
-                        <path d="M7 17 17 7"></path>
-                     </svg>
-                     <a className="decoration-dotted underline-offset-8 hover:underline" href="/inspirations" target="_self">inspirations</a>
-                  </li>
+                     <a className="decoration-dotted underline-offset-8 hover:underline" href={link.href} target={link.target} rel="noopener noreferrer" key={link.text}>
+                           {link.text}
+                     </a>
+                  </li>))}
                </ul>
             </div>
             <div>
                <h3 className="pb-4 font-bold">contact</h3>
                <ul>
-                  <li className="space-x-1 pb-4">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline size-4">
-                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                     </svg>
-                     <a href="mailto:contact@amainder.com" className="decoration-dotted underline-offset-8 hover:underline">email</a>
-                  </li>
-                  <li className="space-x-1">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline size-4">
-                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                        <rect width="4" height="12" x="2" y="9"></rect>
-                        <circle cx="4" cy="4" r="2"></circle>
-                     </svg>
-                     <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/amaninders/" className="decoration-dotted underline-offset-8 hover:underline">linkedin</a>
-                  </li>
+                  {data.contact.map((contact) => (
+                     <li className="space-x-1 pb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline size-4">
+                           <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                           <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                        <a href={contact.href} className="decoration-dotted underline-offset-8 hover:underline" target={contact.target} key={contact.text}>{contact.text}</a>
+                     </li>))}
                </ul>
             </div>
             <div>
