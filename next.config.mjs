@@ -1,6 +1,7 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  output: 'export',
+  trailingSlash: true,
+  assetPrefix: './', // Required for GitHub Pages to correctly load assets
 };
 
 export default nextConfig;
